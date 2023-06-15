@@ -2,7 +2,7 @@ import type LayoutConfigTypes from "@/core/config/LayoutConfigTypes";
 
 const config: LayoutConfigTypes = {
   "general": {
-    "mode": "dark",
+    "mode": "system",
     "iconsType": "duotone"
   },
   "main": {
@@ -14,7 +14,7 @@ const config: LayoutConfigTypes = {
     }
   },
   "illustrations": {
-    "set": "dozzy-1"
+    "set": "unitedpalms-1"
   },
   "scrollTop": {
     "display": true
@@ -51,14 +51,13 @@ const config: LayoutConfigTypes = {
     "hoverable": true
   },
   "sidebar": {
-    "display": true
+    "display": false
   },
   "content": {
-    "width": "fixed"
+    "width": "fluid"
   },
   "footer": {
-    "width": "fixed"
+    "width": "fluid"
   }
 }
-
 export default config;

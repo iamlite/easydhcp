@@ -32,7 +32,7 @@
   </div>
   <!--end::Row-->
 
-  <TablesWidget9 widget-classes="mb-5 mb-xl-10" />
+  <!-- <TablesWidget9 widget-classes="mb-5 mb-xl-10" />  -->
 
   <!--begin::Row-->
   <div class="row gy-5 g-xl-10">

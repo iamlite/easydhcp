@@ -34,7 +34,7 @@ body.page-loading {margin: 0; height: 100%; overflow: hidden; }
 }
 
 html[data-bs-theme="dark"] .page-loading .splash-screen {
-    background-color: #151521;
+    background-color: #1a1a1a;
     color: #ffffff;
 }
 

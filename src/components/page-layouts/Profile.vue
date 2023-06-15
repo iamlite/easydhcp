@@ -64,7 +64,7 @@
               </div>
               <!--end::Info-->
             </div>
-            <!--end::User-->
+            <!--end: :User-->
 
             <!--begin::Actions-->
             <div class="d-flex my-4">
