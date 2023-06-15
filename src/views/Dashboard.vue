@@ -31,7 +31,7 @@
   </div>
   <!--end::Row-->
 
-  <TablesWidget9 widget-classes="mb-5 mb-xl-10" />
+  <TablesWidget13 widget-classes="mb-5 mb-xl-10" />
 
   <!--begin::Row-->
   <div class="row gy-5 g-xl-10">
@@ -56,18 +56,18 @@ import LayoutService from "@/core/services/LayoutService";
 import MixedWidget12 from "@/components/widgets/mixed/Widget12.vue";
 import MixedWidget13 from "@/components/widgets/mixed/Widget13.vue";
 import MixedWidget14 from "@/components/widgets/mixed/Widget14.vue";
-import TablesWidget9 from "@/components/widgets/tables/Widget9.vue";
+import TablesWidget13 from "@/components/widgets/tables/Widget13.vue";
 import ListsWidget5 from "@/components/widgets/lists/Widget5.vue";
 import ListsWidget4 from "@/components/widgets/lists/Widget4.vue";
 import { LS_CONFIG_NAME_KEY } from "@/stores/config";
 
 export default defineComponent({
-  name: "main-dashboard",
+  name: "dashboard",
   components: {
     MixedWidget12,
     MixedWidget13,
     MixedWidget14,
-    TablesWidget9,
+    TablesWidget13,
     ListsWidget5,
     ListsWidget4,
   },

@@ -9,8 +9,8 @@ const config: LayoutConfigTypes = {
     type: "default",
     primaryColor: "#009EF7",
     logo: {
-      dark: "media/logos/default-dark.svg",
-      light: "media/logos/default.svg",
+      dark: "media/logos/demo3-dark.svg",
+      light: "media/logos/demo3.svg",
     },
   },
   illustrations: {
@@ -38,7 +38,7 @@ const config: LayoutConfigTypes = {
   },
   pageTitle: {
     display: true,
-    breadcrumb: true,
+    breadcrumb: false,
     direction: "column",
   },
   aside: {

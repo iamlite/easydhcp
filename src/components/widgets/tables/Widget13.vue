@@ -4,9 +4,8 @@
     <!--begin::Header-->
     <div class="card-header border-0 pt-5">
       <h3 class="card-title align-items-start flex-column">
-        <span class="card-label fw-bold fs-3 mb-1">Recent Orders</span>
-
-        <span class="text-muted mt-1 fw-semobold fs-7">Over 500 orders</span>
+        <span class="card-label fw-bold fs-3 mb-1">DHCP Leases</span>
+        <span class="text-muted mt-1 fw-semobold fs-7">Current lease information</span>
       </h3>
       <div class="card-toolbar">
         <!--begin::Menu-->
@@ -44,18 +43,17 @@
                     class="form-check-input"
                     type="checkbox"
                     @change="
-                      checkedRows.length === 6
+                      checkedRows.length === list.length
                         ? (checkedRows.length = 0)
-                        : (checkedRows = [0, 1, 2, 3, 4, 5])
+                        : (checkedRows = list.map((_, i) => i))
                     "
                   />
                 </div>
               </th>
-              <th class="min-w-150px">Order Id</th>
-              <th class="min-w-140px">Country</th>
-              <th class="min-w-120px">Date</th>
-              <th class="min-w-120px">Company</th>
-              <th class="min-w-120px">Total</th>
+              <th class="min-w-150px">IP Address</th>
+              <th class="min-w-140px">MAC Address</th>
+              <th class="min-w-120px">Lease Time</th>
+              <th class="min-w-120px">Client Identifier</th>
               <th class="min-w-120px">Status</th>
               <th class="min-w-100px text-end">Actions</th>
             </tr>
@@ -83,7 +81,7 @@
                   <a
                     href="#"
                     class="text-dark fw-bold text-hover-primary fs-6"
-                    >{{ item.orderid }}</a
+                    >{{ item.ip }}</a
                   >
                 </td>
 
@@ -91,10 +89,18 @@
                   <a
                     href="#"
                     class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
-                    >{{ item.company.name }}</a
+                    >{{ item.mac }}</a
+                  >
+                </td>
+
+                <td>
+                  <a
+                    href="#"
+                    class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
+                    >{{ item.leaseStart }}</a
                   >
                   <span class="text-muted fw-semobold text-muted d-block fs-7"
-                    >Code: {{ item.country.code }}</span
+                    >End: {{ item.leaseEnd }}</span
                   >
                 </td>
 
@@ -102,27 +108,8 @@
                   <a
                     href="#"
                     class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
-                    >{{ item.date.value }}</a
+                    >{{ item.clientIdentifier }}</a
                   >
-                  <span class="text-muted fw-semobold text-muted d-block fs-7"
-                    >Code: {{ item.date.remarks }}</span
-                  >
-                </td>
-
-                <td>
-                  <a
-                    href="#"
-                    class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
-                    >{{ item.company.name }}</a
-                  >
-                  <span
-                    class="text-muted fw-semobold text-muted d-block fs-7"
-                    >{{ item.company.fields }}</span
-                  >
-                </td>
-
-                <td class="text-dark fw-bold text-hover-primary fs-6">
-                  {{ item.total }}
                 </td>
 
                 <td>
@@ -186,125 +173,28 @@ export default defineComponent({
     const checkedRows = ref<Array<number>>([]);
     const list = [
       {
-        orderid: "56037-XDER",
-        country: {
-          name: "Brasil",
-          code: "PH",
-        },
-        date: {
-          value: "05/28/2020",
-          remarks: "Paid",
-        },
-        progress: {
-          value: "50",
-          color: "primary",
-        },
-        company: {
-          name: "Intertico",
-          fields: "Web, UI/UX Design",
-        },
+        ip: "192.168.1.2",
+        mac: "00:0a:95:9d:68:16",
+        clientIdentifier: "DeviceA",
+        leaseStart: "2023-06-15 08:00:00",
+        leaseEnd: "2023-06-16 08:00:00",
         status: {
-          label: "Approved",
+          label: "Active",
           color: "success",
         },
-        total: "$3560",
       },
       {
-        orderid: "05822-FXSP",
-        country: {
-          name: "Belarus",
-          code: "BY",
-        },
-        date: {
-          value: "04/18/2021",
-          remarks: "Paid",
-        },
-        progress: {
-          value: "50",
-          color: "primary",
-        },
-        company: {
-          name: "Agoda",
-          fields: "Houses & Hotels",
-        },
+        ip: "192.168.1.3",
+        mac: "00:0a:95:9d:68:17",
+        clientIdentifier: "DeviceB",
+        leaseStart: "2023-06-15 08:05:00",
+        leaseEnd: "2023-06-16 08:05:00",
         status: {
-          label: "In Progress",
-          color: "warning",
+          label: "Active",
+          color: "success",
         },
-        total: "$4850",
       },
-      {
-        orderid: "4472-QREX",
-        country: {
-          name: "Phillipines",
-          code: "BH",
-        },
-        date: {
-          value: "07/23/2019",
-          remarks: "Paid",
-        },
-        progress: {
-          value: "50",
-          color: "primary",
-        },
-        company: {
-          name: "RoadGee",
-          fields: "Transportation",
-        },
-        status: {
-          label: "Success",
-          color: "danger",
-        },
-        total: "$8376",
-      },
-      {
-        orderid: "00347-BCLQ",
-        country: {
-          name: "Argentina",
-          code: "BR",
-        },
-        date: {
-          value: "12/21/2021",
-          remarks: "Paid",
-        },
-        progress: {
-          value: "50",
-          color: "primary",
-        },
-        company: {
-          name: "The Hill",
-          fields: "Insurance",
-        },
-        status: {
-          label: "Rejected",
-          color: "info",
-        },
-        total: "$9486",
-      },
-      {
-        orderid: "59486-XDER",
-        country: {
-          name: "Agoda",
-          code: "BT",
-        },
-        date: {
-          value: "05/28/2020",
-          remarks: "Paid",
-        },
-        progress: {
-          value: "50",
-          color: "primary",
-        },
-        company: {
-          name: "Phillipines",
-          fields: "Transportation",
-        },
-        status: {
-          label: "Approved",
-          color: "primary",
-        },
-        total: "$8476",
-      },
+      // Add more entries as needed
     ];
 
     return {
