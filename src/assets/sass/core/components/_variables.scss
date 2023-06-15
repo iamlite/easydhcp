@@ -9,7 +9,7 @@ $prefix: bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
 
 // Bootstrap color system
 $white: #ffffff !default;
-$black:#000000 !default;
+$black: #000000 !default;
 
 // Bootstrap grey colors
 $gray-100: #F9F9F9 !default;
@@ -20,7 +20,7 @@ $gray-500: #A1A5B7 !default;
 $gray-600: #7E8299 !default;
 $gray-700: #5E6278 !default;
 $gray-800: #3F4254 !default;
-$gray-900: #181C32 !default;
+$gray-900: #161616 !default;
 
 // Bootstrap muted color
 $text-muted: $gray-500 !default;

@@ -11,7 +11,7 @@
       <div class="d-flex flex-column flex-grow-1">
         <!--begin::Title-->
         <a href="#" class="text-dark text-hover-primary fw-bold fs-3"
-          >Contributors</a
+          >Network Utilization</a
         >
         <!--end::Title-->
 
@@ -31,11 +31,11 @@
       <!--begin::Stats-->
       <div class="pt-5">
         <!--begin::Number-->
-        <span class="text-dark fw-bold fs-3x me-2 lh-0">47</span>
+        <span class="text-dark fw-bold fs-3x me-2 lh-0">13%</span>
         <!--end::Number-->
 
         <!--begin::Text-->
-        <span class="text-dark fw-bold fs-6 lh-0">- 12% this week</span>
+        <span class="text-dark fw-bold fs-6 lh-0">- bandwidth</span>
         <!--end::Text-->
       </div>
       <!--end::Stats-->

@@ -18,12 +18,12 @@
         <img
           alt="Logo"
           :src="getAssetPath('media/logos/demo3.svg')"
-          class="h-20px logo theme-light-show"
+          class="h-40px logo theme-light-show"
         />
         <img
           alt="Logo"
           :src="getAssetPath('media/logos/demo3-dark.svg')"
-          class="h-20px logo theme-dark-show"
+          class="h-40px logo theme-dark-show"
         />
       </router-link>
       <!--end::Logo-->
@@ -54,13 +54,13 @@
             <a
               href="#"
               class="text-gray-800 text-hover-primary fs-6 fw-bold lh-1"
-              >Paul Melone</a
+              >Tariel Davidashvili</a
             >
             <!--end::Name-->
 
             <!--begin::Major-->
             <span class="text-muted fw-semobold d-block fs-7 lh-1"
-              >Python Dev</span
+              >Admin</span
             >
             <!--end::Major-->
           </div>

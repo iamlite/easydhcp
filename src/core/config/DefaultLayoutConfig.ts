@@ -1,63 +1,64 @@
 import type LayoutConfigTypes from "@/core/config/LayoutConfigTypes";
 
 const config: LayoutConfigTypes = {
-  "general": {
-    "mode": "system",
-    "iconsType": "duotone"
+  general: {
+    mode: "system",
+    iconsType: "duotone",
   },
-  "main": {
-    "type": "default",
-    "primaryColor": "#009EF7",
-    "logo": {
-      "dark": "media/logos/default-dark.svg",
-      "light": "media/logos/default.svg"
-    }
+  main: {
+    type: "default",
+    primaryColor: "#009EF7",
+    logo: {
+      dark: "media/logos/default-dark.svg",
+      light: "media/logos/default.svg",
+    },
   },
-  "illustrations": {
-    "set": "unitedpalms-1"
+  illustrations: {
+    set: "dozzy-1",
   },
-  "scrollTop": {
-    "display": true
+  scrollTop: {
+    display: true,
   },
-  "header": {
-    "display": true,
-    "menuIcon": "keenthemes",
-    "width": "fluid",
-    "fixed": {
-      "desktop": false,
-      "tabletAndMobile": false
-    }
+  header: {
+    display: true,
+    menuIcon: "keenthemes",
+    width: "fluid",
+    fixed: {
+      desktop: false,
+      tabletAndMobile: false,
+    },
   },
-  "toolbar": {
-    "display": true,
-    "width": "fixed",
-    "fixed": {
-      "desktop": true,
-      "tabletAndMobile": true
-    }
+  toolbar: {
+    display: true,
+    width: "fluid",
+    fixed: {
+      desktop: true,
+      tabletAndMobile: true,
+    },
   },
-  "pageTitle": {
-    "display": true,
-    "breadcrumb": true,
-    "direction": "column"
+  pageTitle: {
+    display: true,
+    breadcrumb: true,
+    direction: "column",
   },
-  "aside": {
-    "display": true,
-    "theme": "dark",
-    "fixed": true,
-    "menuIcon": "keenthemes",
-    "minimized": false,
-    "minimize": true,
-    "hoverable": true
+  aside: {
+    display: true,
+    theme: "dark",
+    fixed: true,
+    menuIcon: "keenthemes",
+    minimized: false,
+    minimize: true,
+    hoverable: true,
   },
-  "sidebar": {
-    "display": false
+  sidebar: {
+    display: false,
   },
-  "content": {
-    "width": "fluid"
+  content: {
+    width: "fluid",
   },
-  "footer": {
-    "width": "fluid"
-  }
-}
+  footer: {
+    width: "fluid",
+  },
+};
+
 export default config;

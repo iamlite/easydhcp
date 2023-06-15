@@ -3,15 +3,15 @@
 // Safely override any variable in _variables.custom.scss
 //
 
-$gray-100-dark:  #1b1b29 !default;
-$gray-200-dark:  #2B2B40 !default;
-$gray-300-dark:  #323248 !default;
-$gray-400-dark:  #474761 !default;
-$gray-500-dark:  #565674 !default;
-$gray-600-dark:  #6D6D80 !default;
-$gray-700-dark:  #92929F !default;
-$gray-800-dark:  #CDCDDE !default;
-$gray-900-dark:  #FFFFFF !default;
+$gray-100-dark: #1a1a1a !default;
+$gray-200-dark: #2c2c2c !default;
+$gray-300-dark: #3d3d3d !default;
+$gray-400-dark: #4f4f4f !default;
+$gray-500-dark: #6b6b6b !default;
+$gray-600-dark: #7a7a7a !default;
+$gray-700-dark: #a0a0a0 !default;
+$gray-800-dark: #d6d6d6 !default;
+$gray-900-dark: #f2f2f2 !default;
 
 $grays-dark: (
 	"100": $gray-100-dark,
@@ -30,7 +30,7 @@ $text-muted-dark: $gray-500-dark !default;
 
 // Bootstrap contextual colors
 // Primary colors
-$primary-light-dark:			#212E48 !default;
+$primary-light-dark:			#202020 !default;
 
 // Secondary colors
 $secondary-dark: 				$gray-300-dark !default;
@@ -44,16 +44,16 @@ $light-active-dark: 			$gray-300-dark !default;
 $light-inverse-dark: 			$gray-600-dark !default;
 
 // Success colors
-$success-light-dark:			#1C3833 !default;
+$success-light-dark:			#21f6cf !default;
 
 // Info colors
-$info-light-dark: 				#2F264F !default;
+$info-light-dark: 				#6250a0 !default;
 
 // Warning colors
-$warning-light-dark: 			#392F28 !default;
+$warning-light-dark: 			#c85604 !default;
 
 // Danger colors
-$danger-light-dark:				#3A2434 !default;
+$danger-light-dark:				#e000a5 !default;
 
 // Dark colors
 $dark-dark: 					$gray-900-dark !default; 
@@ -131,7 +131,7 @@ $theme-text-colors-dark: (
 // Body
 //
 // Settings for the `<body>` element.
-$body-bg-dark:              #1e1e2d !default;
+$body-bg-dark:              #202020 !default;
 $body-bg-rgb-dark:          to-rgb($body-bg-dark) !default;
 $body-color-dark:           $gray-900-dark !default;
 

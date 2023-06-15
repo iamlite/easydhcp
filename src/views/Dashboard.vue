@@ -3,6 +3,14 @@
   <div class="row gy-5 g-xl-10">
     <!--begin::Col-->
     <div class="col-xl-4">
+      <MixedWidget14
+        widget-classes="card-xxl-stretch mb-5 mb-xl-10"
+        widget-color="#CBD4F4"
+      />
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-xl-4">
       <MixedWidget12
         widget-classes="card-xl-stretch mb-xl-10"
         widget-color="#F7D9E3"
@@ -20,19 +28,10 @@
       />
     </div>
     <!--end::Col-->
-
-    <!--begin::Col-->
-    <div class="col-xl-4">
-      <MixedWidget14
-        widget-classes="card-xxl-stretch mb-5 mb-xl-10"
-        widget-color="#CBD4F4"
-      />
-    </div>
-    <!--end::Col-->
   </div>
   <!--end::Row-->
 
-  <!-- <TablesWidget9 widget-classes="mb-5 mb-xl-10" />  -->
+  <TablesWidget9 widget-classes="mb-5 mb-xl-10" />
 
   <!--begin::Row-->
   <div class="row gy-5 g-xl-10">

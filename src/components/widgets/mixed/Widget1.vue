@@ -10,7 +10,6 @@
       >
         <!--begin::Heading-->
         <div class="d-flex flex-stack">
-          <h3 class="m-0 text-white fw-bold fs-3">Sales Summary</h3>
 
           <div class="ms-1">
             <!--begin::Menu-->
@@ -31,10 +30,6 @@
         <!--end::Heading-->
 
         <!--begin::Balance-->
-        <div class="d-flex text-center flex-column text-white pt-8">
-          <span class="fw-semobold fs-7">You Balance</span>
-          <span class="fw-bold fs-2x pt-1">$37,562.00</span>
-        </div>
         <!--end::Balance-->
       </div>
       <!--end::Header-->
@@ -42,7 +37,7 @@
       <!--begin::Items-->
       <div
         class="bg-body shadow-sm card-rounded mx-9 mb-9 px-6 py-9 position-relative z-index-1"
-        style="margin-top: -100px"
+        style="margin-top: -175px"
       >
         <template v-for="(item, index) in items" :key="index">
           <!--begin::Item-->

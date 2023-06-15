@@ -11,7 +11,7 @@
       <div class="d-flex flex-column mb-7">
         <!--begin::Title-->
         <a href="#" class="text-dark text-hover-primary fw-bold fs-3"
-          >Summary</a
+          >Network Summary</a
         >
         <!--end::Title-->
       </div>
@@ -32,8 +32,8 @@
 
             <!--begin::Title-->
             <div>
-              <div class="fs-5 text-dark fw-bold lh-1">$50K</div>
-              <div class="fs-7 text-gray-600 fw-semobold">Sales</div>
+              <div class="fs-5 text-dark fw-bold lh-2">54</div>
+              <div class="fs-7 text-gray-600 fw-semobold">Devices</div>
             </div>
             <!--end::Title-->
           </div>
@@ -53,8 +53,8 @@
 
             <!--begin::Title-->
             <div>
-              <div class="fs-5 text-dark fw-bold lh-1">$4,5K</div>
-              <div class="fs-7 text-gray-600 fw-semobold">Revenue</div>
+              <div class="fs-5 text-dark fw-bold lh-2">13</div>
+              <div class="fs-7 text-gray-600 fw-semobold">Static Lease</div>
             </div>
             <!--end::Title-->
           </div>
@@ -74,8 +74,8 @@
 
             <!--begin::Title-->
             <div>
-              <div class="fs-5 text-dark fw-bold lh-1">40</div>
-              <div class="fs-7 text-gray-600 fw-semobold">Tasks</div>
+              <div class="fs-5 text-dark fw-bold lh-2">0</div>
+              <div class="fs-7 text-gray-600 fw-semobold">Quarantined</div>
             </div>
             <!--end::Title-->
           </div>
@@ -95,8 +95,8 @@
 
             <!--begin::Title-->
             <div>
-              <div class="fs-5 text-dark fw-bold lh-1">$5.8M</div>
-              <div class="fs-7 text-gray-600 fw-semobold">Sales</div>
+              <div class="fs-5 text-dark fw-bold lh-2">41</div>
+              <div class="fs-7 text-gray-600 fw-semobold">Dynamic Lease</div>
             </div>
             <!--end::Title-->
           </div>

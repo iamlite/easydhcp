@@ -26,7 +26,6 @@ export default defineComponent({
        * Overrides the layout config using saved data from localStorage
        * remove this to use static config (@/core/config/DefaultLayoutConfig.ts)
        */
-      configStore.overrideLayoutConfig();
 
       /**
        *  Sets a mode from configuration

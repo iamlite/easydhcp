@@ -9,11 +9,11 @@ $root-font-size-md:                             	12px; // Root font size for mob
 
 // Page bg
 $page-bg: 											#f9fafb !default;
-$page-bg-dark:										#272626 !default;
+$page-bg-dark:										#000000 !default;
 
 // App blank bg color
 $app-blank-bg-color: 								$white;
-$app-blank-bg-color-dark: 							#151521;
+$app-blank-bg-color-dark: 							#000000;
 
 // Content Spacing
 $content-spacing: (
@@ -67,7 +67,7 @@ $aside-config: (
 	z-index: 100, // Aside's z-index property
 	menu-indention: 0.75rem,
 	bg-color: #f2f3f5,
-	bg-color-dark: #1e1e2d,
+	bg-color-dark: #202020,
 	width: 300px, // Aside width for desktop mode
 	border-radius: 2rem
 ) !default;
@@ -76,25 +76,25 @@ $aside-config: (
 $sidebar-config: (
 	z-index: 101,
 	width: 400px,	
-	bg-color: #192440,
-	bg-color-dark: #1e1e2d,
+	bg-color: #dcdcdc,
+	bg-color-dark: #202020,
 	tabs: (
 		link-bg-color: (
 			default: #0e172e,
 			default-dark: darken(#1e1e2d, 4%),
 			active: #07122d,
-			active-dark: darken(#1e1e2d, 6%)
+			active-dark: darken(#292929, 6%)
 		),
 		link-icon-color: (
 			default: #5e6278,
-			default-dark: #5e6278,
+			default-dark: #ffffff,
 			active: $white,
 			active-dark: $white
 		),
 	),
 	dashed-border-color: #3e4a69,
 	dashed-border-color-dark: $gray-200-dark,
-	muted-color: #546182,
+	muted-color: #ffffff,
 	muted-color-dark: $text-muted-dark,
 	muted-bg-color: #0e172e,
 	muted-bg-color-dark: darken(#1e1e2d, 2%)

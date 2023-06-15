@@ -11,12 +11,12 @@
     >
       <!--begin::Copyright-->
       <div class="text-dark order-2 order-md-1">
-        <span class="text-muted fw-semobold me-1">2021&copy;</span>
+        <span class="text-muted fw-semobold me-1"> &copy;</span>
         <a
-          href="https://keenthemes.com/"
+          href="https://google.com"
           target="_blank"
           class="text-gray-800 text-hover-primary"
-          >Keenthemes</a
+          >Say Hi</a
         >
       </div>
       <!--end::Copyright-->
@@ -24,15 +24,15 @@
       <!--begin::Menu-->
       <ul class="menu menu-gray-600 menu-hover-primary fw-semobold order-1">
         <li class="menu-item">
-          <a href="#" target="_blank" class="menu-link px-2">About</a>
+          <a href="#" target="_blank" class="menu-link px-2">GitHub</a>
         </li>
 
         <li class="menu-item">
-          <a href="#" target="_blank" class="menu-link px-2">Support</a>
+          <a href="#" target="_blank" class="menu-link px-2">Wiki</a>
         </li>
 
         <li class="menu-item">
-          <a href="#" target="_blank" class="menu-link px-2">Purchase</a>
+          <a href="#" target="_blank" class="menu-link px-2">Discord</a>
         </li>
       </ul>
       <!--end::Menu-->

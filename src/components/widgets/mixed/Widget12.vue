@@ -11,7 +11,7 @@
       <div class="d-flex flex-column flex-grow-1">
         <!--begin::Title-->
         <a href="#" class="text-dark text-hover-primary fw-bold fs-3"
-          >Earnings</a
+          >Leases Expiring Soon</a
         >
         <!--end::Title-->
 
@@ -30,16 +30,12 @@
 
       <!--begin::Stats-->
       <div class="pt-5">
-        <!--begin::Symbol-->
-        <span class="text-dark fw-bold fs-2x lh-0">$</span>
-        <!--end::Symbol-->
-
         <!--begin::Number-->
-        <span class="text-dark fw-bold fs-3x me-2 lh-0">560</span>
+        <span class="text-dark fw-bold fs-3x me-2 lh-0">7</span>
         <!--end::Number-->
 
         <!--begin::Text-->
-        <span class="text-dark fw-bold fs-6 lh-0">+ 28% this week</span>
+        <span class="text-dark fw-bold fs-6 lh-0">+ 28% today</span>
         <!--end::Text-->
       </div>
       <!--end::Stats-->
