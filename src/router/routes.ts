@@ -21,16 +21,16 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("@/views/Dashboard.vue"),
         meta: {
           pageTitle: "Dashboard",
-          breadcrumbs: ["Dashboards"],
+          breadcrumbs: ["Home"],
         },
       },
       {
-        path: "/builder",
-        name: "builder",
-        component: () => import("@/views/LayoutBuilder.vue"),
+        path: "/devices",
+        name: "devices",
+        component: () => import("@/views/devices.vue"),
         meta: {
-          pageTitle: "Layout Builder",
-          breadcrumbs: ["Layout"],
+          pageTitle: "Device List",
+          breadcrumbs: ["Devices"],
         },
       },
       {

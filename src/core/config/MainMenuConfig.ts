@@ -17,13 +17,13 @@ const MainMenuConfig: Array<MenuItem> = [
   },
   {
     heading: "Devices",
-    route: "/builder",
+    route: "/devices",
     keenthemesIcon: "black-right",
     bootstrapIcon: "bi-arrow-right",
   },
   {
     heading: "Static IP",
-    route: "/builder",
+    route: "/static",
     keenthemesIcon: "black-right",
     bootstrapIcon: "bi-arrow-right",
   },
@@ -35,11 +35,11 @@ const MainMenuConfig: Array<MenuItem> = [
     sub:[
       {
         heading: "Overview",
-        route: "/overview",
+        route: "/logs-overview",
       },
       {
         heading: "Tables",
-        route: "/tables",
+        route: "/logs-tables",
       },
     ],
   },

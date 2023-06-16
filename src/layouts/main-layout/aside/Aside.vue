@@ -60,7 +60,7 @@
 
             <!--begin::Major-->
             <span class="text-muted fw-semobold d-block fs-7 lh-1"
-              >Admin</span
+              >Administrator</span
             >
             <!--end::Major-->
           </div>
