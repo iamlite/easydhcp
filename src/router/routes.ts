@@ -34,6 +34,15 @@ const routes: Array<RouteRecordRaw> = [
         },
       },
       {
+        path: "/staticip",
+        name: "staticip",
+        component: () => import("@/views/StaticIp.vue"),
+        meta: {
+          pageTitle: "Static IP",
+          breadcrumbs: ["Static IP"],
+        },
+      },
+      {
         path: "/crafted/pages/profile",
         name: "profile",
         component: () => import("@/components/page-layouts/Profile.vue"),

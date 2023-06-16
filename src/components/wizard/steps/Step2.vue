@@ -4,7 +4,7 @@
     <!--begin::Heading-->
     <div class="pb-10 pb-lg-15">
       <!--begin::Title-->
-      <h2 class="fw-bold text-dark">Account Info</h2>
+      <h2 class="fw-bold text-dark">Configure Network</h2>
       <!--end::Title-->
 
       <!--begin::Notice-->

@@ -23,7 +23,7 @@ const MainMenuConfig: Array<MenuItem> = [
   },
   {
     heading: "Static IP",
-    route: "/static",
+    route: "/staticip",
     keenthemesIcon: "black-right",
     bootstrapIcon: "bi-arrow-right",
   },
@@ -51,19 +51,19 @@ const MainMenuConfig: Array<MenuItem> = [
     sub: [
       {
         heading: "General Settings",
-        route: "./settings/general-settings",
+        route: "/settings/general-settings",
       },
       {
         heading: "Profile Settings",
-        route: "./settings/profile-settings",
+        route: "/settings/profile-settings",
       },
       {
         heading: "DHCP Settings",
-        route: "./settings/dhcp-settings",
+        route: "/settings/dhcp-settings",
       },
       {
         heading: "DNS Settings",
-        route: "./settings/dns-settings",
+        route: "/settings/dns-settings",
       },
     ],
   },

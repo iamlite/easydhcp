@@ -1,104 +1,81 @@
 <template>
-  <!--begin::Wrapper-->
   <div class="w-100">
     <!--begin::Heading-->
     <div class="pb-10 pb-lg-15">
       <!--begin::Title-->
       <h2 class="fw-bold d-flex align-items-center text-dark">
-        Choose Account Type
+        Add New Device
         <i
           class="fas fa-exclamation-circle ms-2 fs-7"
           v-tooltip
-          title="Billing is issued based on your selected account type"
+          title="This is where you are adding a new device"
         ></i>
       </h2>
       <!--end::Title-->
 
       <!--begin::Notice-->
       <div class="text-gray-400 fw-semobold fs-6">
-        If you need more info, please check out
-        <a href="#" class="link-primary fw-bold">Help Page</a>.
+        If you need more info, please check our
+        <a href="#" class="link-primary fw-bold">wiki</a>.
       </div>
       <!--end::Notice-->
     </div>
     <!--end::Heading-->
-
     <!--begin::Input group-->
-    <div class="fv-row">
-      <!--begin::Row-->
-      <div class="row">
-        <!--begin::Col-->
-        <div class="col-lg-6">
-          <!--begin::Option-->
-          <Field
-            type="radio"
-            class="btn-check"
-            name="accountType"
-            value="personal"
-            id="kt_create_account_form_account_type_personal"
-          />
-          <label
-            class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
-            for="kt_create_account_form_account_type_personal"
-          >
-            <KTIcon icon-name="address-book" icon-class="fs-3x me-5" />
+    <div class="fv-row mb-10">
+      <!--begin::Label-->
+      <label class="form-label required">Select your Device</label>
+      <!--end::Label-->
 
-            <!--begin::Info-->
-            <span class="d-block fw-semobold text-start">
-              <span class="text-dark fw-bold d-block fs-4 mb-2">
-                Personal Account
-              </span>
-              <span class="text-gray-400 fw-semobold fs-6"
-                >If you need more info, please check it out</span
-              >
-            </span>
-            <!--end::Info-->
-          </label>
-          <!--end::Option-->
-        </div>
-        <!--end::Col-->
+      <!--begin::Input-->
+      <Field
+        name="device"
+        class="form-select form-select-lg form-select-solid"
+        data-control="select2"
+        data-placeholder="Select..."
+        data-allow-clear="true"
+        data-hide-search="true"
+        as="select"
+      >
+        <option></option>
+        <option value="1">Iphone</option>
+        <option value="1">Android</option>
+        <option value="2">TV</option>
+        <option value="3">Fridge</option>
+        <option value="4">192.168.1.147</option>
+        <option value="5">192.168.1.45</option>
+      </Field>
+      <!--end::Input-->
+      <ErrorMessage
+        name="device"
+        class="fv-plugins-message-container invalid-feedback"
+      ></ErrorMessage>
+    </div>
+    <!--end::Input group-->
+    <!--begin::Or-->
+    <div class="d-flex justify-content-center align-items-center my-5">
+      <div class="border-bottom w-100"></div>
+      <span class="px-3 bg-white text-muted">OR</span>
+      <div class="border-bottom w-100"></div>
+    </div>
+    <!--end::Or-->
+    <!--begin::Input group-->
+    <div class="fv-row mb-10">
+      <!--end::Label-->
+      <label class="form-label">MAC Address</label>
+      <!--end::Label-->
 
-        <!--begin::Col-->
-        <div class="col-lg-6">
-          <!--begin::Option-->
-          <Field
-            type="radio"
-            class="btn-check"
-            name="accountType"
-            value="corporate"
-            id="kt_create_account_form_account_type_corporate"
-          />
-          <label
-            class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center"
-            for="kt_create_account_form_account_type_corporate"
-          >
-            <KTIcon icon-name="briefcase" icon-class="fs-3x me-5" />
-
-            <!--begin::Info-->
-            <span class="d-block fw-semobold text-start">
-              <span class="text-dark fw-bold d-block fs-4 mb-2"
-                >Corporate Account</span
-              >
-              <span class="text-gray-400 fw-semobold fs-6"
-                >Create corporate account to mane users</span
-              >
-            </span>
-            <!--end::Info-->
-          </label>
-          <!--end::Option-->
-        </div>
-        <!--end::Col-->
-
-        <ErrorMessage
-          name="accountType"
-          class="fv-plugins-message-container invalid-feedback"
-        ></ErrorMessage>
-      </div>
-      <!--end::Row-->
+      <!--begin::Input-->
+      <Field
+        type="text"
+        name="MAC Address"
+        class="form-control form-control-lg form-control-solid"
+        rows="1"
+      ></Field>
+      <!--end::Input-->
     </div>
     <!--end::Input group-->
   </div>
-  <!--end::Wrapper-->
 </template>
 
 <script lang="ts">
