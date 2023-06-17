@@ -402,17 +402,30 @@ export default defineComponent({
       _stepperObj.value.goNext();
     });
 
-    const previousStep = () => {
-      if (!_stepperObj.value) {
+    /**
+     * Go to the previous step in the stepper.
+     *
+     * @param {object} stepperObj - The stepper object used to control navigation.
+     * @param {number} currentStepIndex - The current step index.
+     */
+    const previousStep = (stepperObj, currentStepIndex) => {
+      // If there is no stepper object, return early.
+      if (!stepperObj) {
         return;
       }
 
-      currentStepIndex.value--;
+      // Decrement the current step index to go back to the previous step.
+      currentStepIndex--;
 
-      _stepperObj.value.goPrev();
+      // Use the stepper object to navigate to the previous step.
+      stepperObj.goPrev();
     };
 
+    /**
+     * Show a success message and reloads the page after the user submits a form.
+     */
     const formSubmit = () => {
+      // Show a success message to the user
       Swal.fire({
         text: "All is cool! Now you submit this form",
         icon: "success",
@@ -423,6 +436,7 @@ export default defineComponent({
           confirmButton: "btn fw-semobold btn-light-primary",
         },
       }).then(() => {
+        // Reload the page after the user clicks the "Ok, got it!" button
         window.location.reload();
       });
     };
@@ -480,10 +494,16 @@ export default defineComponent({
       initDevices.value.splice(0, tableData.value.length, ...tableData.value);
     });
 
+    /**
+     * Deletes all devices with selected ids
+     * @function deleteFewDevices
+     */
     const deleteFewDevices = () => {
+      // Iterate through selectedIds and delete each device
       selectedIds.value.forEach((item) => {
         deleteDevice(item);
       });
+      // Clear selectedIds
       selectedIds.value.length = 0;
     };
 
@@ -497,38 +517,103 @@ export default defineComponent({
 
     const search = ref<string>("");
 
-    const searchItems = () => {
-      tableData.value.splice(0, tableData.value.length, ...initDevices.value);
-      if (search.value !== "") {
-        let results: Array<IDevice> = [];
-        for (let j = 0; j < tableData.value.length; j++) {
-          if (searchingFunc(tableData.value[j], search.value)) {
-            results.push(tableData.value[j]);
-          }
-        }
-        tableData.value.splice(0, tableData.value.length, ...results);
-      }
-    };
+/**
+ * Replaces the tableData with initDevices and filters the result if search is not empty.
+ * @returns void
+ */
+const searchItems = (): void => {
+  // Replace tableData with initDevices
+  tableData.value.splice(0, tableData.value.length, ...initDevices.value);
 
-    const searchingFunc = (obj: any, value: string): boolean => {
+  // If search is not empty, filter the results
+  if (search.value !== "") {
+    let results: Array<IDevice> = [];
+
+    // Loop through tableData and add items that match the search
+    for (let j = 0; j < tableData.value.length; j++) {
+      if (searchingFunc(tableData.value[j], search.value)) {
+        results.push(tableData.value[j]);
+      }
+    }
+
+    // Replace tableData with filtered results
+    tableData.value.splice(0, tableData.value.length, ...results);
+  }
+};
+
+    /**
+     * Search the string properties of the object to see if the given value is present.
+     * Only searches properties that are strings and not nested objects or integers.
+     *
+     * @param obj - The object to search in.
+     * @param value - The value to search for.
+     * @returns `true` if the value is found, otherwise `false`.
+     */
+    function searchObjectProperties(
+      obj: Record<string, any>,
+      value: string
+    ): boolean {
+      // Iterate through each key in the object
       for (let key in obj) {
-        if (!Number.isInteger(obj[key]) && !(typeof obj[key] === "object")) {
-          if (obj[key].indexOf(value) != -1) {
+        // Get the value of the key in the object
+        const val = obj[key];
+        // If the value is a string and not a nested object or integer
+        if (
+          typeof val === "string" &&
+          !Number.isInteger(val) &&
+          !isObject(val)
+        ) {
+          // If the value includes the search value, return true
+          if (val.includes(value)) {
             return true;
           }
         }
       }
+      // Return false if the value is not found
       return false;
-    };
+    }
 
-    const sort = (sort: Sort) => {
-      const reverse: boolean = sort.order === "asc";
+    /**
+     * Check if the given value is an object
+     *
+     * @param value - The value to check.
+     * @returns `true` if the value is an object, otherwise `false`.
+     */
+    function isObject(value: any): boolean {
+      return value && typeof value === "object" && value.constructor === Object;
+    }
+
+    /**
+     * Check if the given value is an object.
+     *
+     * @param value - The value to check.
+     * @returns `true` if the value is an object, otherwise `false`.
+     */
+    function isObject(value: any): boolean {
+      return value && typeof value === "object" && value.constructor === Object;
+    }
+
+    /**
+     * Sorts the table data according to the provided sort object.
+     * @param {Sort} sort - The sort object containing the label and order.
+     */
+    const sort = (sort) => {
+      // Determine if the sort order is ascending or descending.
+      const reverse = sort.order === "asc";
+
+      // If a label is provided, sort the table data by that label in the specified order.
       if (sort.label) {
         arraySort(tableData.value, sort.label, { reverse });
       }
     };
 
-    const onItemSelect = (selectedItems: Array<number>) => {
+    /**
+     * Updates the selectedIds reactive variable with the provided array of selected item IDs.
+     *
+     * @param {Array<number>} selectedItems - Array of selected item IDs.
+     */
+    const onItemSelect = (selectedItems) => {
+      // Update the selectedIds variable with the provided array of selected item IDs.
       selectedIds.value = selectedItems;
     };
 
