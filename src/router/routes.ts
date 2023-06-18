@@ -43,6 +43,15 @@ const routes: Array<RouteRecordRaw> = [
         },
       },
       {
+        path: "/test",
+        name: "test",
+        component: () => import("@/components/tester.vue"),
+        meta: {
+          pageTitle: "Static IP",
+          breadcrumbs: ["Static IP"],
+        },
+      },
+      {
         path: "/crafted/pages/profile",
         name: "profile",
         component: () => import("@/components/page-layouts/Profile.vue"),

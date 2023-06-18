@@ -2,7 +2,7 @@ import type LayoutConfigTypes from "@/core/config/LayoutConfigTypes";
 
 const config: LayoutConfigTypes = {
   general: {
-    mode: "system",
+    mode: "light",
     iconsType: "duotone",
   },
   main: {

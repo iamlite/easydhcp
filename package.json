@@ -1,6 +1,6 @@
 {
-  "name": "demo3",
-  "version": "8.1.8",
+  "name": "easydhcp",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "vite",

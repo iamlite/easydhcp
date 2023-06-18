@@ -22,7 +22,6 @@
           <router-view />
         </div>
 
-        <KTSidebar v-if="displaySidebar" />
       </div>
       <!-- end:: Content -->
       <KTFooter />
@@ -45,7 +44,6 @@ import {
 } from "vue";
 import { useRoute } from "vue-router";
 import KTAside from "@/layouts/main-layout/aside/Aside.vue";
-import KTSidebar from "@/layouts/main-layout/sidebar/Sidebar.vue";
 import KTHeader from "@/layouts/main-layout/header/Header.vue";
 import KTFooter from "@/layouts/main-layout/footer/Footer.vue";
 import KTScrollTop from "@/layouts/main-layout/extras/ScrollTop.vue";
@@ -70,7 +68,6 @@ export default defineComponent({
   name: "master-layout",
   components: {
     KTAside,
-    KTSidebar,
     KTHeader,
     KTFooter,
     KTScrollTop,
@@ -107,7 +104,6 @@ export default defineComponent({
       loaderLogo,
       asideEnabled,
       subheaderDisplay,
-      displaySidebar,
       themeLightLogo,
       themeDarkLogo,
     };

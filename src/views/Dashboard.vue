@@ -30,20 +30,13 @@
     <!--end::Col-->
   </div>
   <!--end::Row-->
-
-  <!-- 
-  <TablesWidget13 widget-classes="mb-5 mb-xl-10" />
-  -->
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted } from "vue";
-import LayoutService from "@/core/services/LayoutService";
+import { defineComponent } from "vue";
 import MixedWidget12 from "@/components/widgets/mixed/Widget12.vue";
 import MixedWidget13 from "@/components/widgets/mixed/Widget13.vue";
 import MixedWidget14 from "@/components/widgets/mixed/Widget14.vue";
-import TablesWidget13 from "@/components/widgets/tables/Widget13.vue";
-import { LS_CONFIG_NAME_KEY } from "@/stores/config";
 
 export default defineComponent({
   name: "dashboard",
@@ -51,20 +44,7 @@ export default defineComponent({
     MixedWidget12,
     MixedWidget13,
     MixedWidget14,
-    TablesWidget13,
-  },
-  setup() {
-    onMounted(() => {
-      if (!localStorage.getItem(LS_CONFIG_NAME_KEY)) {
-        LayoutService.enableSidebar();
-      }
-    });
-
-    onUnmounted(() => {
-      if (!localStorage.getItem(LS_CONFIG_NAME_KEY)) {
-        LayoutService.disableSidebar();
-      }
-    });
   },
 });
+
 </script>

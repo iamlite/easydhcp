@@ -1,8 +1,13 @@
+// This is a TypeScript configuration file for Node.js
 {
+  // It extends the "@vue/tsconfig/tsconfig.node.json"
   "extends": "@vue/tsconfig/tsconfig.node.json",
+  // Includes files for Vite, Vitest, Cypress, and Playwright configurations
   "include": ["vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*"],
   "compilerOptions": {
+    // Enables composite builds
     "composite": true,
+    // Includes the "node" type
     "types": ["node"]
   }
 }

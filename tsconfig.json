@@ -1,16 +1,29 @@
 {
+  // This configuration file extends another configuration file
+  // @vue/tsconfig/tsconfig.web.json
   "extends": "@vue/tsconfig/tsconfig.web.json",
+
+  // Only include these files for compilation
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+
+  // Compiler options for the TypeScript compiler
   "compilerOptions": {
+    // Disable the "noImplicitAny" option
     "noImplicitAny": false,
+
+    // Set the baseUrl to the project root
     "baseUrl": ".",
+
+    // Map paths starting with "@" to the corresponding files in the "src" directory
     "paths": {
       "@/*": ["./src/*"]
     }
   },
 
+  // References to other configuration files
   "references": [
     {
+      // Path to the referenced configuration file
       "path": "./tsconfig.config.json"
     }
   ]

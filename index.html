@@ -5,29 +5,41 @@
   <meta charset="UTF-8">
   <meta name="description" content="EasyDHCP - A simple DHCP Server for your home network" />
   <link rel="icon" href="/favicon.ico">
+
+  <!-- Load fonts from Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
+
+  <!-- Load custom CSS for splash screen -->
   <link rel="stylesheet" href="/splash-screen.css">
+
+  <!-- Set viewport for responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>EasyDHCP</title>
 </head>
 
 <body class="page-loading">
     <!--begin::Theme mode setup on page load-->
     <script>
+        /* Sets the theme mode on page load. */
         let themeMode = "light";
 
+        /* Get theme mode from local storage if it exists. */
         if (localStorage.getItem("kt_theme_mode_value")) {
             themeMode = localStorage.getItem("kt_theme_mode_value");
         }
 
+        /* If theme mode is "system", set it based on user's OS preferences. */
         if (themeMode === "system") {
             themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         }
 
+        /* Set data-bs-theme attribute on root element to apply theme mode. */
         document.documentElement.setAttribute("data-bs-theme", themeMode);
     </script>
     <!--end::Theme mode setup on page load-->
 
+    <!-- Container for the app -->
     <div id="app"></div>
 
     <!--begin::Loading markup-->
@@ -38,6 +50,7 @@
     </div>
     <!--end::Loading markup-->
 
+    <!-- Load the main TypeScript file -->
     <script type="module" src="/src/main.ts"></script>
 </body>
 

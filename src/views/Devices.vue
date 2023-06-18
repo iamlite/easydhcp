@@ -119,8 +119,8 @@ import { defineComponent, onMounted, ref } from "vue";
 import Datatable from "@/components/kt-datatable/KTDataTable.vue";
 import type { Sort } from "@/components/kt-datatable//table-partials/models";
 import AddDeviceModal from "@/components/modals/forms/AddDeviceModal.vue";
-import type { IDevice } from "@/core/data/devices"; // You need to define this interface
-import devices from "@/core/data/devices"; // You need to create this data
+import type { IDevice } from "@/core/data/devices";
+import devices from "@/core/data/devices";
 import arraySort from "array-sort";
 
 export default defineComponent({
